@@ -1,0 +1,545 @@
+.documentsGrid {
+  background: #eaf5f5 !important;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // Exactly 4 per row
+  gap: 20px;
+}
+
+.documentCard {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.documentCard:hover {
+  transform: translateY(-5px);
+}
+
+.folderName {
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
+.fileCount {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.downloadArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+}
+
+.documentsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .documentCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .documentInfo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .folderIcon {
+        padding: 12px;
+        background-color: #4caf50;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          color: white;
+          font-size: 1.2rem;
+        }
+      }
+
+      .documentTitleSection {
+        display: flex;
+        flex-direction: column;
+
+        .folderName {
+          font-size: 1rem;
+          font-weight: 500;
+          max-width: 250px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .fileCount {
+          display: flex;
+          align-items: center;
+          font-size: 0.85rem;
+          color: #666;
+          margin-top: 4px;
+
+          i {
+            margin-right: 6px;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    .downloadArea {
+      cursor: pointer;
+      color: #333;
+      font-size: 1.2rem;
+      padding: 0.5rem;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+}
+
+.folderName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.documentTitleSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.fileCount {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+
+.downloadArea {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+
+  i {
+    transition: color 0.3s ease;
+    font-size: 1.2rem;
+
+    &:hover {
+      color: #1abc9c;
+    }
+  }
+}
+
+.nodatafound {
+  display: flex;
+  align-items: center;
+  min-height: 250px;
+  justify-content: center;
+}
+
+.videoContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // Exactly 4 per row
+  gap: 20px;
+
+  background: #eaf5f5 !important;
+}
+.videoCard {
+  padding: 5px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.videoTop {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.eventtime {
+  font-size: 13px;
+  color: #4a4a4a;
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.video {
+  flex-shrink: 0;
+  width: 150px;
+  height: 90px;
+  margin-right: 10px;
+
+  video {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+}
+
+.videoContainerTitle {
+  flex-grow: 1;
+  font-size: 13px;
+  font-weight: 600;
+
+  .videoTitle {
+    color: #0078d4;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: #005a9e;
+    }
+  }
+}
+
+.videoContaineDownload {
+  flex-shrink: 0;
+  width: 67px;
+
+  .downloadBtn {
+    color: #555;
+    padding: 8px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    i {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  .iframePlayer {
+    width: 100%;
+    height: 400px;
+    border: none;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+  }
+
+  .downloadBtn {
+    margin-bottom: 1rem;
+  }
+
+  .closeBtn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+
+    &:hover {
+      background-color: #c0392b;
+    }
+  }
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .documentName {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1c1c1c;
+    text-decoration: none;
+    max-width: 245px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #0078d4;
+      text-decoration: underline;
+    }
+  }
+}
+
+// 📂 File Item
+.fileItem {
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  padding: 8px 5px;
+
+  font-size: 0.95rem;
+  color: #333;
+
+  &:hover {
+    background-color: #f5faff;
+  }
+
+  span {
+    flex: 1;
+    word-break: break-word;
+  }
+
+  .downloadIcon {
+    font-size: 1rem;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #3f9f4e; // green highlight
+    }
+  }
+}
+
+.downloadAllBtn {
+  background-color: #3f9f4e;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #2f7a3b;
+  }
+}
+
+.pDialogFooter {
+  padding: 0.8rem 1rem;
+  border-top: 1px solid #ddd;
+  text-align: right;
+  background: #f9fafc;
+}
+/*New*/
+
+.breadcrumb {
+  font-size: 14px;
+  color: #605e5c;
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+  // border-bottom: 1px solid #e1dfdd;
+
+  span {
+    display: inline-block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:last-child {
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+}
+
+/* Folder list styling */
+.folderList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  flex-direction: column;
+  .folderItem {
+    display: flex;
+    align-items: center;
+    // border: 1px solid #e1dfdd;
+    border-radius: 6px;
+    padding: 8px 12px;
+    background: #f3f2f1;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 5px;
+  }
+}
+
+/* File list styling */
+.fileList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+
+  .fileItem {
+    display: flex;
+    align-items: center;
+    background: #faf9f8;
+    border: 1px solid #e1dfdd;
+    border-radius: 6px;
+    padding: 8px 12px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: #f3f2f1;
+    }
+
+    a {
+      text-decoration: none;
+      color: #323130;
+      font-weight: 500;
+      flex: 1;
+      margin-left: 10px;
+
+      &:hover {
+        color: #0078d4;
+        text-decoration: underline;
+      }
+    }
+
+    .subText {
+      font-size: 12px;
+      color: #605e5c;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+  }
+}
+
+.fileIcon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+/* 📁 Table-style document list */
+.documentTable {
+  width: 100%;
+  background: transparent;
+  border-radius: 8px;
+  margin-top: 10px;
+
+  .tableHeader {
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    padding: 10px 16px;
+    color: #0078d4;
+    font-weight: 600;
+    font-size: 14px;
+    // border-bottom: 1px solid #e1dfdd;
+  }
+
+  .tableRow {
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    align-items: center;
+    padding: 10px 16px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px rgba(234, 234, 234, 0.6);
+
+    &:hover {
+      background: #f3f2f1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .colName {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      span,
+      a {
+        font-size: 14px;
+        color: #333;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          color: #0078d4;
+        }
+      }
+
+      .folderIcon {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+      }
+    }
+
+    .colModified,
+    .colModifiedBy {
+      font-size: 13px;
+      color: #605e5c;
+    }
+  }
+}

@@ -1,0 +1,291 @@
+.recentDocuments {
+  padding: 0px 10px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  font-family: "Segoe UI", sans-serif;
+
+  transition: all 0.3s ease;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px !important;
+
+    .title {
+      font-size: 19px;
+      font-weight: 600;
+      color: #747171 !important;
+      margin: 0;
+    }
+
+    .seeAll {
+      font-size: 0.9rem;
+      color: #0078d4;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+
+      &:hover {
+        text-decoration: underline;
+        color: #005a9e;
+      }
+    }
+  }
+
+  .documentItem {
+    display: flex;
+    align-items: flex-start;
+    padding: 5px 0px;
+
+    margin-bottom: 10px;
+    gap: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    .icon {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+
+      .subText {
+        font-size: 13px;
+        color: #817e7e;
+        margin-top: 3px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        font-weight: 500;
+        span {
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+
+  .nodatafound {
+    display: flex;
+    align-items: center;
+    min-height: 250px;
+    justify-content: center;
+  }
+}
+.documentName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1c1c1c;
+  text-decoration: none;
+  max-width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+/*New*/
+.allDocuments {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #323130;
+    }
+  }
+
+  .breadcrumb {
+    font-size: 14px;
+    color: #605e5c;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e1dfdd;
+
+    span {
+      display: inline-block;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  /* Folder list styling */
+  
+   .folderList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+  max-height: 320px;
+  overflow-y: auto;
+
+    .folderItem {
+      display: flex;
+      align-items: center;
+
+      border-radius: 6px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+
+      transition: all 0.2s ease;
+    }
+  }
+
+  /* File list styling */
+  .fileList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+
+    .fileItem {
+      display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover {
+    background: #f3f2f1;
+  }
+
+      a {
+        text-decoration: none;
+        color: #323130;
+        font-weight: 500;
+        flex: 1;
+        margin-left: 10px;
+
+        &:hover {
+          color: #0078d4;
+          text-decoration: underline;
+        }
+      }
+
+      .subText {
+        font-size: 12px;
+        color: #605e5c;
+        margin-left: auto;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+.fileIcon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+
+.recentDocuments {
+  background: #fff;
+
+  border-radius: 8px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+    }
+  }
+
+  .folderSection {
+    margin-bottom: 8px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .folderHeader {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 0;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #f4f4f4;
+    }
+
+    .folderIcon {
+      width: 22px;
+      height: 22px;
+      margin-right: 8px;
+    }
+
+    .folderTitle {
+      font-weight: 500;
+      font-size: 15px;
+      color: #0078d4;
+    }
+  }
+
+  .fileList {
+    padding-left: 30px;
+    margin-top: 5px;
+    animation: fadeIn 0.3s ease;
+
+    .fileItem {
+      display: flex;
+      align-items: center;
+      padding: 5px 0;
+
+      .fileIcon {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+      }
+
+      .documentName {
+        font-size: 14px;
+        color: #333;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          color: #0078d4;
+        }
+      }
+    }
+  }
+
+  .nodatafound {
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

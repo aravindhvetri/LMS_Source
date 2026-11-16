@@ -1,0 +1,176 @@
+.calendercontainer {
+  font-family: "Segoe UI", sans-serif;
+
+  // Highlight "Today"
+  .fcTodayCustom {
+    color: whitesmoke !important;
+    background-color: #3f9f4e !important;
+    border-radius: 5px !important;
+    font-weight: bold;
+  }
+
+  .fcSelectedDate,.testDate {
+    color: #3f9f4e !important;
+    border-radius: 5px !important;
+    font-weight: bold !important;
+    border-radius: 10px;
+  }
+  .fcSelectedDate a,.testDate a{
+   color: #3f9f4e !important;
+  font-weight: 800 !important;
+  font-size: 15px !important;
+  }
+
+
+  .fcFirst7Days {
+    background-color: #e3f2fd; // light orange/yellow
+  }
+
+  // Highlight selected date
+
+  // Day number customization
+  .fc .fc-daygrid-day-number {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  // Calendar layout & buttons
+  .fc .fc-toolbar-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  // Hover effect on days
+  .fc-day:hover {
+    background-color: rgba(25, 118, 210, 0.1);
+    border-radius: 50%;
+  }
+
+  .fc-daygrid-day-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 36px;
+  }
+}
+
+// calendar
+
+.calendercontainer {
+  background: #fff;
+  height:400px;
+  // padding: 12px;
+  .calenderEventHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: none !important;
+
+    .Title {
+      font-size: 19px;
+      font-weight: 600;
+      color: #747171;
+      margin: 0;
+
+      .CalIcon {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        background-color: #3f9f4e !important;
+        align-items: center;
+        img {
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+    .Seemore {
+      margin-right: 12px;
+      display: flex;
+      gap: 7px;
+      align-items: center;
+      a {
+        color: #0c007a !important;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      img {
+        height: 19px;
+        width: 16px;
+        cursor: pointer;
+      }
+    }
+  }
+  .CalCardContainer {
+    padding: 10px;
+    display: flex;
+    width: 100%;
+  }
+  .UpcomingHeading {
+    font-size: 18px;
+    color: #0c007a;
+    // margin: 0 0 8px 15px;
+    margin-bottom: 0.5rem;
+  }
+  .Calender {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width:30%;
+  }
+  .showEvent {
+    display: flex;
+    gap: 20px;
+    // align-items: center;
+    margin: 0;
+    flex-grow: 1;
+    padding: 10px;
+    border-left: 5px solid #00a99d;
+    box-shadow: 5px 3px 10px #e1e1e1;
+    border-radius: 5px;
+    p {
+      margin: 0;
+      // width: 187px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      //-webkit-line-clamp: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: default;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    span {
+      color: #434343;
+    }
+    p {
+      color: #0c007a;
+    }
+    .events {
+      border-right: 1px solid #d9d9d9;
+      width: 76px;
+      label {
+        text-align: center;
+        font-size: 18px;
+        padding: 0;
+      }
+      .month {
+        font-weight: 500;
+        color: #0c007a;
+      }
+    }
+  }
+  .prevnextcontainer {
+    display: flex;
+    justify-content: end;
+    width: 30%;
+  }
+  .nodatafound {
+    display: flex;
+    align-items: center;
+    min-height: 250px;
+    justify-content: center;
+  }
+}

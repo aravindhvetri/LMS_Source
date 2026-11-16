@@ -1,0 +1,98 @@
+// Colors
+$primary-text: #111827;
+$secondary-text: #4b5563;
+$contributor-border: #e5e7eb;
+
+// Badge colors
+$gold-gradient: linear-gradient(135deg, #fdf8e6, #fff7d6);
+$silver-gradient: linear-gradient(135deg, #f4f8fb, #eaf2f7);
+$bronze-gradient: linear-gradient(135deg, #fdf2e6, #fbe7d3);
+
+// Card styles
+.contributor_card {
+  background: #fff;
+
+  border-radius: 15px;
+  height: 325px;
+  margin-top: 20px;
+  padding: 16px;
+  text-align: center;
+
+  max-width: 375px;
+  margin: auto;
+  font-family: "Segoe UI", sans-serif;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  .profile_img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f3f4f6;
+    margin-bottom: 12px;
+  }
+
+  .name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: $primary-text;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #000;
+
+    &.gold {
+      background: $gold-gradient;
+    }
+    &.silver {
+      background: $silver-gradient;
+    }
+    &.bronze {
+      background: $bronze-gradient;
+    }
+  }
+
+  .description {
+    font-size: 14px;
+    color: $secondary-text;
+    line-height: 1.4;
+  }
+}
+
+.Title {
+  font-size: 19px;
+  font-weight: 600;
+  color: #747171;
+  margin: 0;
+}
+
+.nodatafound {
+  display: flex;
+  align-items: center;
+  min-height: 250px;
+  justify-content: center;
+}
+
+.ContributorLeader {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.custom_carousel {
+  width: 395px;
+  height: auto;
+}
